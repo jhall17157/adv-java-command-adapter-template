@@ -10,6 +10,7 @@ public class Broker {
 
     private List<Order> orderList = new ArrayList<>();
 
+
     public void placeOrders() {
 
         for (Order order : orderList) {
@@ -20,5 +21,11 @@ public class Broker {
 
     public void takeOrder(Order order) {
         orderList.add(order);
+    }
+
+    public void undo() {
+        if (!orderList.isEmpty()) {
+            orderList.remove(orderList.size() - 1).undo();
+        }
     }
 }

@@ -7,10 +7,13 @@ public class Stock {
 
     private String name = "ABC";
     private int quantity = 10;
+    private String name2 = "DEF";
+    private int quantity2 = 15;
 
     public void buy() {
         System.out.println("Stock [ Name: " + name + ", Quantity: " + quantity + " ] bought");
     }
+    public void undon() { System.out.println("Stock [Name: " + name + " Quantity: " + quantity + " ] was re-bought/re-sold"); }
 
     public String getName() {
         return name;
